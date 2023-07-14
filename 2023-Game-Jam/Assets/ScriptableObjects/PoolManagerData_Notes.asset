@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee58c6b8832543b38f6eaa9d46623b33, type: 3}
+  m_Name: PoolManagerData_Notes
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 7503693863679007525, guid: 8de00af407265554183b8e33f17111b0, type: 3}
+    - {fileID: 2580888399268996793, guid: fb6a6acc262e8204cbe7f65ad8194cb1, type: 3}
+    - {fileID: 7503693863679007525, guid: b061bb1203726b5449307269576209ba, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: eventToPooledData
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Core.Events.EventType, Assembly-CSharp],[PooledData,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Core.Events.EventType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 7
+      Data: 2|PooledData, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 0
+    - Name: initialPoolSize
+      Entry: 3
+      Data: 10
+    - Name: maxPoolSize
+      Entry: 3
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 12
+    - Name: $v
+      Entry: 7
+      Data: 3|PooledData, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 1
+    - Name: initialPoolSize
+      Entry: 3
+      Data: 10
+    - Name: maxPoolSize
+      Entry: 3
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 11
+    - Name: $v
+      Entry: 7
+      Data: 4|PooledData, Assembly-CSharp
+    - Name: prefab
+      Entry: 10
+      Data: 2
+    - Name: initialPoolSize
+      Entry: 3
+      Data: 10
+    - Name: maxPoolSize
+      Entry: 3
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

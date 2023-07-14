@@ -1,0 +1,505 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949400a2b1ce4a6d8ced8f558bad6ee0, type: 3}
+  m_Name: GameModeData
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 7279105763972304832, guid: 5f04a5968a0e1624cb711f1f7339f201, type: 3}
+    - {fileID: 7279105763972304832, guid: ac6f9984350cb304385b8bdae2e50b10, type: 3}
+    - {fileID: 1995304790187793672, guid: fccfe18f61e0e7f48ba96d439a3c599a, type: 3}
+    - {fileID: 1995304790187793672, guid: cfdae89814ec9624aba4d76224f84682, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: noteHitCondDict
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[HitCondition, Assembly-CSharp],[MarginOfError,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[HitCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 2|MarginOfError, Assembly-CSharp
+    - Name: beginMOE
+      Entry: 4
+      Data: -0.1
+    - Name: endMOE
+      Entry: 4
+      Data: -0.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 3|MarginOfError, Assembly-CSharp
+    - Name: beginMOE
+      Entry: 4
+      Data: 0
+    - Name: endMOE
+      Entry: 4
+      Data: -0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 4|MarginOfError, Assembly-CSharp
+    - Name: beginMOE
+      Entry: 4
+      Data: 0
+    - Name: endMOE
+      Entry: 4
+      Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 5|MarginOfError, Assembly-CSharp
+    - Name: beginMOE
+      Entry: 4
+      Data: 0.15
+    - Name: endMOE
+      Entry: 4
+      Data: 0.4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 6|MarginOfError, Assembly-CSharp
+    - Name: beginMOE
+      Entry: 4
+      Data: -0.15
+    - Name: endMOE
+      Entry: 4
+      Data: -99999
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 7|MarginOfError, Assembly-CSharp
+    - Name: beginMOE
+      Entry: 4
+      Data: 0.4
+    - Name: endMOE
+      Entry: 4
+      Data: 99999
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: laneControllerData
+      Entry: 7
+      Data: 8|System.Collections.Generic.Dictionary`2[[Data_Classes.NoteData+LaneOrientation,
+        Assembly-CSharp],[LaneControllerData, Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 9|System.Collections.Generic.EnumEqualityComparer`1[[Data_Classes.NoteData+LaneOrientation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 10|LaneControllerData, Assembly-CSharp
+    - Name: input
+      Entry: 3
+      Data: 113
+    - Name: hitPoint
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 4
+      Data: 4.5
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: collider
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 11|LaneControllerData, Assembly-CSharp
+    - Name: input
+      Entry: 3
+      Data: 97
+    - Name: hitPoint
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: collider
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: hitCondToScoreData
+      Entry: 7
+      Data: 12|System.Collections.Generic.Dictionary`2[[HitCondition, Assembly-CSharp],[ScoreData,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 13|System.Collections.Generic.EnumEqualityComparer`1[[HitCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 14|ScoreData, Assembly-CSharp
+    - Name: score
+      Entry: 3
+      Data: 100
+    - Name: countTowardsCombo
+      Entry: 5
+      Data: true
+    - Name: resetCombo
+      Entry: 5
+      Data: false
+    - Name: hitMarkPrefab
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 15|ScoreData, Assembly-CSharp
+    - Name: score
+      Entry: 3
+      Data: 300
+    - Name: countTowardsCombo
+      Entry: 5
+      Data: true
+    - Name: resetCombo
+      Entry: 5
+      Data: false
+    - Name: hitMarkPrefab
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 16|ScoreData, Assembly-CSharp
+    - Name: score
+      Entry: 3
+      Data: 300
+    - Name: countTowardsCombo
+      Entry: 5
+      Data: true
+    - Name: resetCombo
+      Entry: 5
+      Data: false
+    - Name: hitMarkPrefab
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 17|ScoreData, Assembly-CSharp
+    - Name: score
+      Entry: 3
+      Data: 50
+    - Name: countTowardsCombo
+      Entry: 5
+      Data: false
+    - Name: resetCombo
+      Entry: 5
+      Data: false
+    - Name: hitMarkPrefab
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 18|ScoreData, Assembly-CSharp
+    - Name: score
+      Entry: 3
+      Data: 0
+    - Name: countTowardsCombo
+      Entry: 5
+      Data: false
+    - Name: resetCombo
+      Entry: 5
+      Data: true
+    - Name: hitMarkPrefab
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: typeToTag
+      Entry: 7
+      Data: 19|System.Collections.Generic.Dictionary`2[[NoteType, Assembly-CSharp],[System.String,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 20|System.Collections.Generic.EnumEqualityComparer`1[[NoteType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 1
+      Data: NoteNormal
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 1
+      Data: NoteSlider
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  volume: 0.224
+  hitVolume: 0.044
+  mainMenuSceneName: MainMenu
+  levelSelectionSceneName: LevelSelection
+  gamePlaySceneName: SampleScene
+  optionSceneName: 
+  inputDelayInMS: 0
+  songDelayInSeconds: 0
+  noteTime: 1.5
+  noteSpawnX: 20
+  noteTapX: 3
+  noteLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _sliderHoldStickyTime: 0.15

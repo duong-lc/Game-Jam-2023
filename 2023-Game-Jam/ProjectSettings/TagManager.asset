@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Lane1
+  - Lane2
+  - Lane3
+  - Lane4
+  - subLR
+  - mainLR
+  - NoteNormal
+  - NoteSlider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - NoteLayer
+  - WorldUI
+  - PP
+  - no PP
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Lane Dividers
+    uniqueID: 3264716491
+    locked: 0
+  - name: Hit Border
+    uniqueID: 3005486611
+    locked: 0
+  - name: MainLR
+    uniqueID: 581000347
+    locked: 0
+  - name: SubLR
+    uniqueID: 208803465
+    locked: 0
+  - name: Note
+    uniqueID: 2198639645
+    locked: 0
+  - name: WorldUI
+    uniqueID: 2249812111
+    locked: 0
