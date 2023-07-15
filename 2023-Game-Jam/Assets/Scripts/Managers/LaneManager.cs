@@ -31,7 +31,13 @@ namespace Managers
         public float currGlobalTimeColorSwap;
         public double TimeOnColorSwap => SongManager.Instance.GetAudioSourceTimeRaw() + GameModeManager.Instance.GameModeData.NoteTime;
         public List<LaneColorInstance> colorInstList;
-        
+
+        public Vector3 upperPos;
+        public Vector3 lowerPos;
+        public GameObject blueWarning;
+        public GameObject redWarning;
+
+        private Sequence _warningSeq;
         
         public LaneColorInstance CurrentTimeColorSwapInfo()
         {
@@ -39,8 +45,38 @@ namespace Managers
             {
                 if (TimeOnColorSwap >= colorInstList[i].time)
                 {
+                    if (Math.Abs(currGlobalTimeColorSwap - colorInstList[i].time) > .01f)
+                    {
+                        if (colorInstList[i].upperLaneColor == NoteColorEnum.Blue)
+                        {
+                            blueWarning.transform.position = upperPos;
+                            redWarning.transform.position = lowerPos;
+                        }
+
+                        if (colorInstList[i].upperLaneColor == NoteColorEnum.Red)
+                        {
+                            redWarning.transform.position = upperPos;
+                            blueWarning.transform.position = lowerPos;
+                        }
+
+                        _warningSeq.Kill();
+                        _warningSeq = DOTween.Sequence();
+
+                        _warningSeq.InsertCallback(0, () => blueWarning.SetActive(true))
+                            .InsertCallback(0, () => redWarning.SetActive(true))
+                            .InsertCallback(0.2f, () => blueWarning.SetActive(false))
+                            .InsertCallback(0.2f, () => redWarning.SetActive(false))
+                            .InsertCallback(0.4f, () => blueWarning.SetActive(true))
+                            .InsertCallback(0.4f, () => redWarning.SetActive(true))
+                            .InsertCallback(0.6f, () => blueWarning.SetActive(false))
+                            .InsertCallback(0.6f, () => redWarning.SetActive(false))
+                            .InsertCallback(0.8f, () => blueWarning.SetActive(true))
+                            .InsertCallback(0.8f, () => redWarning.SetActive(true))
+                            .InsertCallback(1f, () => blueWarning.SetActive(false))
+                            .InsertCallback(1f, () => redWarning.SetActive(false));
+
+                    }
                     currGlobalTimeColorSwap = colorInstList[i].time;
-                    // NCLogger.Log($"{TimeOnColorSwap} upper {colorInstList[i].upperLaneColor} lower {colorInstList[i].lowerLaneColor} at {currGlobalTimeColorSwap}" );
                     return colorInstList[i];
                 }
             }
@@ -61,6 +97,25 @@ namespace Managers
             if(!_gameModeData) NCLogger.Log($"midiData is {_gameModeData}", LogLevel.ERROR);
 #endif
 
+            blueWarning.SetActive(false);
+            redWarning.SetActive(false);
+            
+            _warningSeq.Kill();
+            _warningSeq = DOTween.Sequence();
+
+            _warningSeq.InsertCallback(0, () => blueWarning.SetActive(true))
+                .InsertCallback(0, () => redWarning.SetActive(true))
+                .InsertCallback(0.4f, () => blueWarning.SetActive(false))
+                .InsertCallback(0.4f, () => redWarning.SetActive(false))
+                .InsertCallback(0.8f, () => blueWarning.SetActive(true))
+                .InsertCallback(0.8f, () => redWarning.SetActive(true))
+                .InsertCallback(1.2f, () => blueWarning.SetActive(false))
+                .InsertCallback(1.2f, () => redWarning.SetActive(false))
+                .InsertCallback(1.6f, () => blueWarning.SetActive(true))
+                .InsertCallback(1.6f, () => redWarning.SetActive(true))
+                .InsertCallback(2f, () => blueWarning.SetActive(false))
+                .InsertCallback(2f, () => redWarning.SetActive(false));
+            
             AssignColliderData();
             // TimeToLaneColorInst = colorSwapList.TimeToLaneColorInst;
             StartCoroutine(LaneValidationRoutine());

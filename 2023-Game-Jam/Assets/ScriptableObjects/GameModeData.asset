@@ -489,7 +489,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   volume: 1
-  hitVolume: 0.493
+  hitVolume: 0.856
   mainMenuSceneName: MainMenu
   levelSelectionSceneName: LevelSelection
   gamePlaySceneName: SampleScene

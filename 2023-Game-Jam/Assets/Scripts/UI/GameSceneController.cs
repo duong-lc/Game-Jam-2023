@@ -81,10 +81,11 @@ public class GameSceneController : Singleton<GameSceneController>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2)
-            {
-                LoadPauseOverlay();
-            }
+            // if (SceneManager.GetActiveScene().buildIndex == 2)
+            // {
+            //   
+            // }
+            LoadPauseOverlay();
         }
     }
 
@@ -101,8 +102,7 @@ public class GameSceneController : Singleton<GameSceneController>
     
     public void LoadPauseOverlay()
     {
-        //NCLogger.Log($"lmao xd");
-        // GameModeManager.SetGameState(GameModeManager.GameState.PauseMode);
+        if (SongManager.Instance == null) return;
         GameModeManager.Instance.CurrentGameState = GameState.PauseMode;
         SongManager.PauseSong();
         Time.timeScale = 0;
@@ -128,22 +128,12 @@ public class GameSceneController : Singleton<GameSceneController>
 
     public void LoadRestartLevel()
     {
-        if (_consumeInput) return;
-        Time.timeScale = 1;
-        _consumeInput = true;
-        StartCoroutine(
-            LoadSceneRoutine(
-                () =>  SceneManager.LoadScene(GameModeManager.Instance.GameModeData.gamePlaySceneName)));
+        SceneManager.LoadScene(GameModeManager.Instance.GameModeData.gamePlaySceneName);
     }
 
     public void LoadReturnToLevelSelectionScene()
     {
-        if (_consumeInput) return;
-        Time.timeScale = 1;
-        _consumeInput = true;
-        StartCoroutine(
-            LoadSceneRoutine(
-                () => SceneManager.LoadScene(GameModeManager.Instance.GameModeData.levelSelectionSceneName)));
+       SceneManager.LoadScene(GameModeManager.Instance.GameModeData.mainMenuSceneName);
     }
     
     private IEnumerator LoadSceneRoutine(Action callback)

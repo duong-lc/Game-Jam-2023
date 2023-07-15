@@ -203,7 +203,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.15686274, b: 0.24474609, a: 1}
+      key0: {r: 1, g: 0.15686274, b: 0.49045634, a: 1}
       key1: {r: 1, g: 0.39215684, b: 0.6174306, a: 1}
       key2: {r: 0.9245283, g: 0.6236205, b: 0.8721968, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -416,7 +416,7 @@ MonoBehaviour:
   knockRotate: {x: 50, y: 50, z: 0}
   knockTime: 0.15
   stallTime: 0.075
-  fallVector: {x: 3.7, y: -6.5, z: 0}
+  fallVector: {x: 3.7, y: -17, z: 0}
   fallRotate: {x: 100, y: 100, z: 0}
   fallTime: 0.42
   groundRun: 
@@ -563,8 +563,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.98039216, g: 0.41960782, b: 0.5277078, a: 1}
-      key1: {r: 0.98039216, g: 0.41960782, b: 0.5277078, a: 1}
+      key0: {r: 0.98039216, g: 0.3921569, b: 0.5699299, a: 1}
+      key1: {r: 0.98039216, g: 0.3921569, b: 0.5699299, a: 1}
       key2: {r: 0.9811321, g: 0.42114633, b: 0.9398951, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
