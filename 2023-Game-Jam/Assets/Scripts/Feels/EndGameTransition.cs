@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Core.Events;
 using Core.Logging;
 using DG.Tweening;
+using Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -81,6 +82,24 @@ public class EndGameTransition : MonoBehaviour
         GameSceneController.Instance.LoadEndScreenOverlay();
         var bossHp = ScoreManager.Instance.BossHpPoint;
         hpNumberText.text = bossHp.ToString();
+        var totalScore = 0;
+        foreach (var player in ControlManager.Instance.players)
+        {
+            totalScore += player.playerAtkPoint;
+        }
+
+        atkNumberText.text = totalScore.ToString();
+
+        if (totalScore >= bossHp)
+        {
+            gameStateImage.color = colorGreen;
+            stateText.text = "YOU WIN!";
+        }
+        else
+        {
+            gameStateImage.color = colorRed;
+            stateText.text = "YOU LOSE!";
+        }
         
         
         var mySequence = DOTween.Sequence().SetUpdate(UpdateType.Normal, true);

@@ -160,6 +160,11 @@ namespace Managers
             return (double) (GetAudioSourceTimeRaw() - (_gameModeData.InputDelayInMS / 1000.0));
         }
 
+        public double GetSongLength()
+        {
+            return audioSource.clip.length;
+        }
+        
         public static void PauseSong()
         {
             Instance.audioSource.Pause();

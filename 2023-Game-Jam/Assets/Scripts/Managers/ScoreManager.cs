@@ -90,7 +90,7 @@ public class ScoreManager : Singleton<ScoreManager>
     [SerializeField] private Transform tweenTransform;
 
     [Header("GameJam Mechanics")] 
-    
+    public Slider progressBar;
 
     // public int playerRedAtk;
     // public int playerBlueAtk;
@@ -176,10 +176,15 @@ public class ScoreManager : Singleton<ScoreManager>
         missHits = 0;
 
         _ogComboScale = tweenTransform.localScale;
-        bossHPText.text = "x" + bossHpPoint.ToString();
+        bossHPText.text = bossHpPoint.ToString();
 
     }
 
+    private void Update()
+    {
+        progressBar.value = (float) (SongManager.Instance.GetAudioSourceTimeRaw() / SongManager.Instance.GetSongLength());
+    }
+    
     private void OnHit(HitMarkInitData param)
     {
         TMP_Text display = null;
