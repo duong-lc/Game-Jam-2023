@@ -14,6 +14,8 @@ public class MainMenuController : MonoBehaviour
 {
     private TransitionState state;
     private bool _consumeInput = false;
+    public GameObject tutorialSlider;
+    public GameObject menus;
     [SerializeField] private PostProcessVolume volume;
     
     private void Awake()
@@ -47,11 +49,7 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadGamePlayGameJam()
     {
-        if (_consumeInput) return;
-        _consumeInput = true;
-        StartCoroutine(
-            LoadSceneRoutine(
-                () => SceneManager.LoadScene(GameModeManager.Instance.GameModeData.gamePlaySceneName)));
+        SceneManager.LoadScene(GameModeManager.Instance.GameModeData.gamePlaySceneName);
     }
 
     private IEnumerator LoadSceneRoutine(Action callback)
@@ -69,9 +67,15 @@ public class MainMenuController : MonoBehaviour
     
     public void LoadOptions()
     {
-        if (_consumeInput) return;
-        _consumeInput = true;
-        //SceneManager.LoadScene(GameModeManager.Instance.gameModeData.optionSceneName);
+        tutorialSlider.SetActive(true);
+        menus.SetActive(false);
+    }
+
+    public void BackToMenu()
+    {
+        tutorialSlider.transform.Find("TutorialSlides").GetComponent<SlideScroller>().ExitTutorial();
+        tutorialSlider.SetActive(false);
+        menus.SetActive(true);
     }
 
     public void LoadQuitApplication()
