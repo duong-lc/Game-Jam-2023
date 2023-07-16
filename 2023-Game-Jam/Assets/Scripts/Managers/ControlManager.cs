@@ -233,14 +233,17 @@ namespace Managers
             
             foreach (var player in players)
             {
+                player.KillIdle();
                 if (player.Orientation == NoteData.LaneOrientation.One)
                 {
-                    player.transform.DOMove(lowerLaneT.position, swapTime);
+                    var tween = player.transform.DOMove(lowerLaneT.position, swapTime);
+                    tween.OnComplete(() => player.StartIdle());
                     player.Orientation = NoteData.LaneOrientation.Two;
                 }
                 else
                 {
-                    player.transform.DOMove(upperLaneT.position, swapTime);
+                    var tween1 = player.transform.DOMove(upperLaneT.position, swapTime);
+                    tween1.OnComplete(() => player.StartIdle());
                     player.Orientation = NoteData.LaneOrientation.One;
                 }
             }

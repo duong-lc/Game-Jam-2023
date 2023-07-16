@@ -27,7 +27,7 @@ public class FeelManager : MonoBehaviour
     private Tweener _dutchTweener;
     private Dictionary<NoteData.LaneOrientation, DutchData> _laneToDutch = new Dictionary<NoteData.LaneOrientation, DutchData>()
     {
-        {NoteData.LaneOrientation.One, new DutchData(-7, .25f)},
+        {NoteData.LaneOrientation.One, new DutchData(4, .25f)},
         {NoteData.LaneOrientation.Two,  new DutchData(-4, .35f)},
         {NoteData.LaneOrientation.Three,  new DutchData(4, .35f)},
         {NoteData.LaneOrientation.Four,  new DutchData(7, .25f)},

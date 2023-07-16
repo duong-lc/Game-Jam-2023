@@ -23,7 +23,12 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float dashDownTime;
     [SerializeField] private float stallDashTime;
     [SerializeField] private float rePosTime;
+
     [Space] 
+    public float speedIdle;
+    public float yDisplacement;
+    public float speedIdleX;
+    public float xDisplacement;
     // private bool _isGrounded;
     private Sequence _sequence;
 
@@ -32,7 +37,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private List<string> hurtList;
     [SerializeField] private List<string> jumpList;
     [SerializeField] private List<string> landList;
-
+    [SerializeField] private string switchLaneUp;
+    [SerializeField] private string switchLaneDown;
+    
     [SerializeField] private string groundBlock;
     [SerializeField] private string airBlock;
     [SerializeField] private string idle;
@@ -45,6 +52,9 @@ public class CharacterController : MonoBehaviour
     
     public int playerAtkPoint;
     public float sliderValue;
+
+    public Sequence seq;
+    public Sequence seq1;
     public Animator _MCAnimator {
         get {
             if (_mcAnimator == null) {
@@ -61,11 +71,31 @@ public class CharacterController : MonoBehaviour
         this.AddListener(EventType.PlayerEndBlock, param => Attack((NoteData.LaneOrientation) param));
     }
 
-    private void Start() {
-        // _isGrounded = true;
-        // Orientation = NoteData.LaneOrientation.Two;
+    private void Start()
+    {
+        StartIdle();
     }
 
+    public void KillIdle()
+    {
+        seq.Kill();
+        seq1.Kill();
+    }
+    
+    public void StartIdle()
+    {
+        seq = DOTween.Sequence();
+        seq.Append(transform.DOMoveY(transform.position.y - yDisplacement, speedIdle));
+        // seq.Append(transform.DOMoveY(transform.position.y + .5f, 2));
+        seq.SetLoops(-1, LoopType.Yoyo);
+        seq.Play();
+        
+        seq1 = DOTween.Sequence();
+        seq1.Append(transform.DOMoveX(transform.position.x - xDisplacement, speedIdleX));
+        seq1.SetLoops(-1, LoopType.Yoyo);
+        seq1.Play();
+    }
+    
     private void Attack(NoteData.LaneOrientation laneOrientation)
     {
         if (laneOrientation != Orientation) return;

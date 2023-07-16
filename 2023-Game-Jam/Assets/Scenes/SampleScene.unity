@@ -5636,7 +5636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83441f8efffbe554597ab25b5111a7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &762795589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8378,10 +8377,15 @@ MonoBehaviour:
   dashDownTime: 0.05
   stallDashTime: 0.3
   rePosTime: 0.25
+  speedIdle: 0.25
+  yDisplacement: 0.25
+  speedIdleX: 0.5
+  xDisplacement: 0.25
   attackList:
   - Blue_Attack_0
   - Blue_Attack_1
   - Blue_Attack_2
+  - Blue_Attack_3
   hurtList:
   - BeatCombatHurt01
   - BeatCombatHurt02
@@ -8392,6 +8396,8 @@ MonoBehaviour:
   landList:
   - BeatCombatJump01Land
   - BeatCombatJump02Land
+  switchLaneUp: 
+  switchLaneDown: 
   groundBlock: Blue_Begin_Block
   airBlock: Blue_Begin_Block
   idle: Blue_Idle
@@ -9151,10 +9157,15 @@ MonoBehaviour:
   dashDownTime: 0.05
   stallDashTime: 0.3
   rePosTime: 0.25
+  speedIdle: 1
+  yDisplacement: 0.25
+  speedIdleX: 0
+  xDisplacement: 0
   attackList:
   - attack_red_0
   - attack_red_1
   - attack_red_2
+  - attack_red_3
   hurtList:
   - BeatCombatHurt01
   - BeatCombatHurt02
@@ -9165,6 +9176,8 @@ MonoBehaviour:
   landList:
   - BeatCombatJump01Land
   - BeatCombatJump02Land
+  switchLaneUp: 
+  switchLaneDown: 
   groundBlock: begin_block_red
   airBlock: begin_block_red
   idle: Idle_red
