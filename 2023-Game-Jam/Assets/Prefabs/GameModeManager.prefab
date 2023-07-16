@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameModeData: {fileID: 11400000, guid: f8654c302f29d6845aaad2c9c0124499, type: 2}
-  currentMidiData: {fileID: 11400000, guid: 04321d10205bbaa4a8e5f17dfa827fd5, type: 2}
+  currentMidiData: {fileID: 11400000, guid: 54344b403bd91dc4486cb0fa5882339a, type: 2}
   noColorGradingProfile: {fileID: 11400000, guid: af9ce6f5a43fd2843afd0272b387900b, type: 2}
   colorGradingProfile: {fileID: 11400000, guid: 17457d1d9c8e2c04295eb9be8ca38c87, type: 2}
   colorGradingProfilelvl: {fileID: 11400000, guid: 85c08f5825734024a904182a56a45e98, type: 2}

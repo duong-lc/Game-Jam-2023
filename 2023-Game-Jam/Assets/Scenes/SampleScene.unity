@@ -5806,6 +5806,7 @@ MonoBehaviour:
   scaleEnd: 1
   endGameScreen: {fileID: 2093893547}
   tweenTransform: {fileID: 297042966}
+  progressBar: {fileID: 1564206685}
   bossHPText: {fileID: 310936653}
   bossHpPoint: 20
   perfectHits: 0
@@ -6629,10 +6630,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameModeManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3120610727802663610, guid: bdd866e3ff461494b90c7c5fac618e92, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3120610727802663620, guid: bdd866e3ff461494b90c7c5fac618e92, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -6677,10 +6674,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3120610727802663621, guid: bdd866e3ff461494b90c7c5fac618e92, type: 3}
-      propertyPath: currentMidiData
-      value: 
-      objectReference: {fileID: 11400000, guid: 54344b403bd91dc4486cb0fa5882339a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd866e3ff461494b90c7c5fac618e92, type: 3}
 --- !u!1 &875828757
