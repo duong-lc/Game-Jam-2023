@@ -5,6 +5,7 @@ using System.Linq;
 using Core.Events;
 using Data_Classes;
 using DG.Tweening;
+using Managers;
 using Melanchall.DryWetMidi.MusicTheory;
 using UnityEngine;
 using EventType = Core.Events.EventType;
@@ -80,20 +81,40 @@ public class CharacterController : MonoBehaviour
     {
         seq.Kill();
         seq1.Kill();
+        
+        
+        
+    }
+
+    public void FlyUp()
+    {
+        _MCAnimator.Play(switchLaneUp);
+    }
+
+    public void FlyDown()
+    {
+        _MCAnimator.Play(switchLaneDown);
     }
     
     public void StartIdle()
     {
-        seq = DOTween.Sequence();
-        seq.Append(transform.DOMoveY(transform.position.y - yDisplacement, speedIdle));
-        // seq.Append(transform.DOMoveY(transform.position.y + .5f, 2));
-        seq.SetLoops(-1, LoopType.Yoyo);
-        seq.Play();
-        
-        seq1 = DOTween.Sequence();
-        seq1.Append(transform.DOMoveX(transform.position.x - xDisplacement, speedIdleX));
-        seq1.SetLoops(-1, LoopType.Yoyo);
-        seq1.Play();
+        // Vector3 displaceRoot = ControlManager.Instance.upperLaneT.position;
+        //
+        // if(Orientation == NoteData.LaneOrientation.One)
+        //     displaceRoot = ControlManager.Instance.upperLaneT.position;
+        // else
+        //     displaceRoot = ControlManager.Instance.lowerLaneT.position;
+        //
+        // seq = DOTween.Sequence();
+        // seq.Append(transform.DOMoveY(displaceRoot.y - yDisplacement, speedIdle));
+        // // seq.Append(transform.DOMoveY(transform.position.y + .5f, 2));
+        // seq.SetLoops(-1, LoopType.Yoyo);
+        // seq.Play();
+        //
+        // seq1 = DOTween.Sequence();
+        // seq1.Append(transform.DOMoveX(displaceRoot.x - xDisplacement, speedIdleX));
+        // seq1.SetLoops(-1, LoopType.Yoyo);
+        // seq1.Play();
     }
     
     private void Attack(NoteData.LaneOrientation laneOrientation)

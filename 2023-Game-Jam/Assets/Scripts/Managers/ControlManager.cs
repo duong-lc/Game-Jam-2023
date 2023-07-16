@@ -236,15 +236,21 @@ namespace Managers
                 player.KillIdle();
                 if (player.Orientation == NoteData.LaneOrientation.One)
                 {
-                    var tween = player.transform.DOMove(lowerLaneT.position, swapTime);
-                    tween.OnComplete(() => player.StartIdle());
                     player.Orientation = NoteData.LaneOrientation.Two;
+                    player.FlyDown();
+                    var seq = DOTween.Sequence();
+                    seq.Append(player.transform.DOMove(lowerLaneT.position, swapTime));
+                    seq.InsertCallback(swapTime + 1, () => player.StartIdle());
+                    seq.Play();
                 }
                 else
                 {
-                    var tween1 = player.transform.DOMove(upperLaneT.position, swapTime);
-                    tween1.OnComplete(() => player.StartIdle());
                     player.Orientation = NoteData.LaneOrientation.One;
+                    player.FlyUp();
+                    var seq = DOTween.Sequence();
+                    seq.Append(player.transform.DOMove(upperLaneT.position, swapTime));
+                    seq.InsertCallback(swapTime + 1, () => player.StartIdle());
+                    seq.Play();
                 }
             }
 

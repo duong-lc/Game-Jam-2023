@@ -9,7 +9,8 @@ using UnityEngine.Video;
 public class SplashScreen : MonoBehaviour
 {
     private VideoPlayer _playerComponent;
-
+    [SerializeField] private string videoFileName;
+    
     public VideoPlayer VideoPlayer
     {
         get
@@ -19,13 +20,28 @@ public class SplashScreen : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        PlayVideo();
+    }
+
     public double VideoProgress => VideoPlayer.time / VideoPlayer.length;
 
     private void LateUpdate()
     {
-        if (VideoProgress >= .99)
+        if (Time.time >= 5f)
         {
             SceneManager.LoadScene(1);
+        }
+    }
+
+    public void PlayVideo()
+    {
+        if (VideoPlayer)
+        {
+            string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
+            VideoPlayer.url = videoPath;
+            VideoPlayer.Play();
         }
     }
 }
